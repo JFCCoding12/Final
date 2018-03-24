@@ -54,7 +54,7 @@ sizing of window *NEED TO TEST WINDOWS VERSION*
 ----To Do----
 travling aspect
 shops
-moral
+morale
 random events
 rest stops
 time - like record how long it takes ingame time not irl
