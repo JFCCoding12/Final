@@ -5,6 +5,7 @@
 #include "headers/ColorConsole.h"
 #include "headers/Movinglogic.h"
 #include "headers/game.h"
+#include "headers/shop.h"
 
 
 
@@ -125,6 +126,9 @@ void devmode(){
 	}
 		 else if ( ch == "pickdate"){
 			 pickDate();
+	}
+		 else if ( ch == "gotoshop"){
+			 gotoShop();
 	}else {
 		cout << "unknown function\n";
 		devmode();

@@ -8,21 +8,24 @@ CPP_SRCS += \
 ../Hunting.cpp \
 ../MovementLogic.cpp \
 ../game.cpp \
-../main.cpp 
+../main.cpp \
+../shop.cpp 
 
 OBJS += \
 ./Consolecolor.o \
 ./Hunting.o \
 ./MovementLogic.o \
 ./game.o \
-./main.o 
+./main.o \
+./shop.o 
 
 CPP_DEPS += \
 ./Consolecolor.d \
 ./Hunting.d \
 ./MovementLogic.d \
 ./game.d \
-./main.d 
+./main.d \
+./shop.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

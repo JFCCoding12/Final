@@ -7,6 +7,7 @@
 
 #ifndef COLORCONSOLE_H_
 #define COLORCONSOLE_H_
+#include <string>
 void clearscreen();
 extern std::string  RESET;
 extern std::string BLUE;

@@ -1,9 +1,11 @@
 #include <iostream>
 #include "headers/game.h"
 #include "headers/ColorConsole.h"
+#include "headers/shop.h"
 #include <string>
 #include <fstream>
 #include <cctype>
+
 
 using namespace std;
 
@@ -18,7 +20,6 @@ void clearscreen(){
 		system("clear");
 #endif
 }
-void start();
 void getnames();
 void checkNames();
 void pickDate();
@@ -37,7 +38,7 @@ void newgame(){
 	cout << RED <<        "|       "<< GREEN <<"     4) Difference between them             "<< RED <<"                                                                         |" << endl;
 	cout << RED <<       "|                                                                                                                            |" << endl;
 	cout << RED << "|________________________________________________________@@@_________________________________________________________________|" << endl;
-	cout << YELLOW << "Who do you want to be?: ";
+	cout << YELLOW << "Who do you want to be?: "<< RESET;
 	cin >> option;
 	cout << RESET;
 	while(!cin) //make sure user gives a number not a string or char!
@@ -67,12 +68,14 @@ void newgame(){
 	case 4:
 		// add later
 		cout << "";
+		outData.close();
 		break;
 
 	default:
 		clearscreen();
 		newgame();
 	}
+	outData.close();
 }
 void getnames(){
 	int i = 1;
@@ -126,16 +129,16 @@ void getnames(){
 void checkNames(){
 	clearscreen();
 	char option;
+	char c;
 	fstream inData;
 	string num, name;
 		inData.open("playernames.TMT",  ios::in);
 		cout << RED << "_______________________________________________________@@@___________________________________________________________________" << endl;
-	    char c;
 	    while (inData >> num >> c >> name && c == '-')
 	        cout <<"                            "<< GREEN << num << " " << name << RED << "\n";
 		inData.close();
 		cout << RED << "_______________________________________________________@@@____________________________________________________________________" << endl;
-		cout << YELLOW << "Are you sure you want these names?(Y/N): ";
+		cout << YELLOW << "Are you sure you want these names?(Y/N): "<< RESET;
 		cin >> option;
 		cout << RESET;
 		while(!cin) //make sure user gives a number not a string or char!
@@ -167,22 +170,50 @@ void checkNames(){
 }
 void pickDate(){
 	clearscreen();
+	fstream outData;
+	outData.open("playerstats.TMT", ios::app); //append
 	int option = 0;
 		cout << RED << "________________________________________________________@@@___________________________________________________________________" << endl;
 		cout << RED << "|  "<< GREEN <<"  What Month do you want to start in?    "<< RED <<"                                                                                 |" << endl;
 		cout << RED << "|                                                                                                                            |" << endl;
-
 		cout << RED << "|     "<< CYAN <<"Choosing the right time of year can make a big difference "<< RED <<"                                                             |" << endl;
 		cout << RED << "|     "<< CYAN <<"         on how hard of a journey it will be "<< RED <<"                                                                          |" << endl;
 		cout << RED << "|                                                                                                                            |" << endl;
-
 		cout << RED << "|     "<< GREEN <<"    1) April "<< RED <<"                                                                                                          |" << endl;
 		cout << RED << "|     "<< GREEN <<"     2) May    "<< RED <<"                                                                                                        |" << endl;
 		cout << RED << "|      "<< GREEN <<"     3) October "<< RED <<"                                                                                                      |" << endl;
 		cout << RED << "|       "<< GREEN <<"     4) November             "<< RED <<"                                                                                        |" << endl;
 		cout << RED << "|                                                                                                                            |" << endl;
 		cout << RED << "|________________________________________________________@@@_________________________________________________________________|" << endl;
-		cout << YELLOW << "Who do you want to be?: ";
+		cout << YELLOW << "Who do you want to be?: " << RESET;
 		cin >> option;
 		cout << RESET;
+		switch(option){
+		case 1:
+			outData << " April";
+			outData.close();
+			gotoShop();
+			break;
+		case 2:
+			outData << " May";
+			outData.close();
+			gotoShop();
+			break;
+		case 3:
+			outData << " October";
+			outData.close();
+			gotoShop();
+			break;
+		case 4:
+			outData << " November";
+			outData.close();
+			gotoShop();
+			break;
+		default:
+			outData.close();
+			pickDate();
+			break;
+		}
+		outData.close();
+
 }
