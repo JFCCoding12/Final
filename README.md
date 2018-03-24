@@ -1,0 +1,66 @@
+#  The Maine Trail
+## CS140 final
+
+
+                              #####                           
+                             #### _\_                         
+                             ##=-[.].]   :::                  
+                             #(    _\   `'_:                  
+                              #  \__|    | |                  
+                               \___/     | |                  
+                              .'   `-----' |                  
+                            ( )     ,------'                  
+                            | |     |         _     _         
+                            | |     |        ((_____))        
+                            | |     |         [o   o]         
+                            |_|==o=={        / \   /          
+                            :..     |       /  (o o)          
+               .------------'''  Y---------'     U            
+              |               |  |              /             
+             |                |  |             |              
+            :|                }  )            |               
+           : |       _        |  |           |                
+          :  |      / \       |__|_          |                
+         :   |     /   \      [____)         |                
+       :     |   /\___/\______________\   |  |                
+      #      |  /  uuu                 |  |  |                
+              | |   | |                |  |  |                
+              | |   | |                 | || |                
+              | |   | |                 | || |                
+              |\\   |\\                 |\\|\\
+The Maine Trail Notes   
+Color format  
+Boarders = RED  
+Text = GREEN  
+Alerts = CYAN  
+Input = YELLOW  
+
+Note* I am looking to add more supported colors for windows so hang with me  
+
+on main screen if you press 5 you can type in the name of the function to skip all the bs  
+
+***Ignore the warnings on build, compilers hate cows.***  
+
+when creating a save file for anything make sure its a type .TMT just makes it look better  
+player stats will be saved in playerstats.TMT  
+player names will be saved in playernames.TMT  
+
+---Finished---  
+main screen  
+career choice  
+names  
+pick start date  
+basic hunting *NEED REWRITE FOR WINDOWS*  
+colors  
+sizing of window *NEED TO TEST WINDOWS VERSION*  
+
+----To Do----  
+travling aspect  
+shops  
+morale  
+random events  
+rest stops  
+time - like record how long it takes ingame time not irl  
+MORE ASCII ART  
+highscore system/scoring system  
+credits  
