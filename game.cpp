@@ -185,27 +185,27 @@ void pickDate(){
 		cout << RED << "|       "<< GREEN <<"     4) November             "<< RED <<"                                                                                        |" << endl;
 		cout << RED << "|                                                                                                                            |" << endl;
 		cout << RED << "|________________________________________________________@@@_________________________________________________________________|" << endl;
-		cout << YELLOW << "Who do you want to be?: " << RESET;
+		cout << YELLOW << "What Month do you want to start in?: " << RESET;
 		cin >> option;
 		cout << RESET;
 		switch(option){
 		case 1:
-			outData << " April";
+			outData << " April" << " " <<1<< " " << 2018; //temp year;
 			outData.close();
 			gotoShop();
 			break;
 		case 2:
-			outData << " May";
+			outData << " May" << " " <<1<< " " << 2018; //temp year;
 			outData.close();
 			gotoShop();
 			break;
 		case 3:
-			outData << " October";
+			outData << " October" << " " <<1<< " " << 2018; //temp year;
 			outData.close();
 			gotoShop();
 			break;
 		case 4:
-			outData << " November";
+			outData << " November" << " " <<1<< " " << 2018; //temp year;
 			outData.close();
 			gotoShop();
 			break;
