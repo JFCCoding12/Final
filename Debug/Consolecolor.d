@@ -1,0 +1,1 @@
+Consolecolor.o: ../Consolecolor.cpp

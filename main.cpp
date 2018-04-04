@@ -6,6 +6,7 @@
 #include "headers/Movinglogic.h"
 #include "headers/game.h"
 #include "headers/shop.h"
+#include "headers/nlohmann/json.hpp"
 
 
 
@@ -15,6 +16,7 @@ void devmode();
 void setscreensize(){
 #if defined(_WIN32)
 {
+#include <windows.h>
   HWND console = GetConsoleWindow();
   RECT r;
   GetWindowRect(console, &r); //stores the console's current dimensions
