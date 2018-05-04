@@ -9,7 +9,9 @@ CPP_SRCS += \
 ../MovementLogic.cpp \
 ../game.cpp \
 ../main.cpp \
-../shop.cpp 
+../shop.cpp \
+../stats.cpp \
+../timer.cpp 
 
 OBJS += \
 ./Consolecolor.o \
@@ -17,7 +19,9 @@ OBJS += \
 ./MovementLogic.o \
 ./game.o \
 ./main.o \
-./shop.o 
+./shop.o \
+./stats.o \
+./timer.o 
 
 CPP_DEPS += \
 ./Consolecolor.d \
@@ -25,7 +29,9 @@ CPP_DEPS += \
 ./MovementLogic.d \
 ./game.d \
 ./main.d \
-./shop.d 
+./shop.d \
+./stats.d \
+./timer.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

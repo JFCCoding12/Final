@@ -6,7 +6,7 @@
 #include "headers/Movinglogic.h"
 #include "headers/game.h"
 #include "headers/shop.h"
-#include "headers/nlohmann/json.hpp"
+#include "headers/main.h"
 
 
 
@@ -55,8 +55,8 @@ int main(){
 	cout << "|                                                                                                                           |" << endl;
 	cout << "|                                                                                                                           |" << endl;
 	cout << "|         1) Run The Trail                                                                                                  |" << endl;
-	cout << "|          2) Highscores                                                                                                    |" << endl;
-	cout << "|           3) Credits                                                                                                      |" << endl;
+	cout << "|          2) Credits                                                                                                       |" << endl;
+	cout << "|                                                                                                                           |" << endl;
 	cout << "|            4) Quit                                                                                                        |" << endl;
 	cout << "|                                                                                                                           |" << endl;
 	cout << RED << "|________________________________________________________@@@________________________________________________________________|" << endl;
@@ -77,10 +77,13 @@ int main(){
 		newgame();
 		break;
 	case 2:
-	//	highscores();
-		break;
-	case 3:
-	//	credits();
+		cout << endl;
+		cout << endl;
+		cout << endl;
+		cout << endl;
+		cout << endl;
+		cout << endl;
+		credits();
 		break;
 	case 4:
 		return 0;

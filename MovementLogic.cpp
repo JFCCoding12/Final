@@ -11,7 +11,7 @@
 int x = 1;
 int y = 9;
 
-int hit = 0;
+bool hit = false;
 
 char map[11][21] = {
 		"                    ",
@@ -66,11 +66,12 @@ void Move(int V, int H, int S){
 
 		if(map[y-i][x] == 'C'){
 					map[y-i][x] = 'H';
-					hit++;
-					MovingAnimals();
+					hit = true;
+
 
 		} else if(map[y-i][x] != 'C'){
 			map[y-i][x] = '|';
+
 		}
 
 	}

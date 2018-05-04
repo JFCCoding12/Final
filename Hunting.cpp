@@ -10,6 +10,9 @@
 #include <time.h>
 #include <stdio.h>
 #include "headers/Movinglogic.h"
+#include "headers/game.h"
+#include "headers/shop.h"
+#include "headers/timer.h"
 
 using namespace std;
 
@@ -22,7 +25,15 @@ bool gamerunning = true;
  * how we want it to....
  *
  */
-
+void clear1(){
+#if defined(_WIN32)
+  system("CLS");
+#elif defined(__linux__)
+  system("CLS");
+#elif defined(__APPLE__)
+		system("clear");
+#endif
+}
 
 
 #if defined(__APPLE__)
@@ -41,7 +52,9 @@ void play(){
 	 			cout << map[i] << endl;
 	 		}
 	system("stty raw");
+	hit = false;
 do{
+
      ch=getchar();
        if(ch == 'd'){
     	   system("stty cooked");//right
@@ -68,14 +81,14 @@ do{
 	for(int i = 1; i < 11; i++){
 	 			cout << map[i] << endl;
 	 		}
-
 	cout << "hit: "<< hit << endl;
 
 
+
 	 system("stty raw");
-}while(ch != '~');
+}while(hit == false);
 system("stty cooked");
-cout << "Good Bye\n";
+gameLoop();
 }
 
 

@@ -18,5 +18,5 @@
 
 extern char map[11][21];
 extern int x;
-extern int hit;
+extern bool hit;
 extern int y;

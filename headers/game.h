@@ -10,5 +10,7 @@
 void newgame();
 void getnames();
 void pickDate();
+void gameLoop();
+int credits();
 #endif /* GAME_H_ */
 

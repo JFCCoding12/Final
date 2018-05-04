@@ -70,7 +70,7 @@ inline std::ostream& RESET(std::ostream &s)
        FOREGROUND_RED|FOREGROUND_GREEN|FOREGROUND_BLUE);
     return s;
 }
-nline std::ostream& CYAN(std::ostream &s)
+inline std::ostream& CYAN(std::ostream &s)
 {
     HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hStdout, FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
